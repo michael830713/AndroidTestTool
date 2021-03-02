@@ -28,14 +28,12 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val intent = Intent(activity, CounterService::class.java)
         view.findViewById<Button>(R.id.button_start).setOnClickListener {
-            Intent(activity, CounterService::class.java).also { intent ->
-                activity?.startService(intent)
-            }
-
-// Notification ID cannot be 0.
-
+            activity?.startService(intent)
+        }
+        view.findViewById<Button>(R.id.button_stop).setOnClickListener {
+            activity?.stopService(intent)
         }
     }
 }

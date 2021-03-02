@@ -11,11 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceTestTool">
-        <service
-            android:name=".CounterService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="TODO" />
+        <service android:name=".CounterService" />
 
         <activity
             android:name=".MainActivity"
