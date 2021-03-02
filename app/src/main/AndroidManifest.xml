@@ -3,6 +3,7 @@
     package="com.example.servicetesttool">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceTestTool">
+        <service
+            android:name=".CounterService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="TODO" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
