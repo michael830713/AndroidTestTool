@@ -7,21 +7,32 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.servicetesttool.ServiceFragment"
+        android:name="com.example.servicetesttool.fragments.ServiceFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first" />
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.servicetesttool.SecondFragment"
+        android:id="@+id/ContentProviderFragment"
+        android:name="com.example.servicetesttool.fragments.ContentProviderFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/content_provider_fragment" />
     <fragment
         android:id="@+id/entryFragment"
-        android:name="com.example.servicetesttool.EntryFragment"
+        android:name="com.example.servicetesttool.fragments.EntryFragment"
         android:label="fragment_entry"
         tools:layout="@layout/fragment_entry">
         <action
             android:id="@+id/action_entryFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_entryFragment_to_ContentProviderFragment"
+            app:destination="@id/ContentProviderFragment" />
+        <action
+            android:id="@+id/action_entryFragment_to_braodcastReceiverFragment"
+            app:destination="@id/braodcastReceiverFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/braodcastReceiverFragment"
+        android:name="com.example.servicetesttool.fragments.BraodcastReceiverFragment"
+        android:label="fragment_braodcast_receiver"
+        tools:layout="@layout/fragment_braodcast_receiver" />
 </navigation>

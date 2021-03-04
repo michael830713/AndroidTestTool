@@ -1,4 +1,4 @@
-package com.example.servicetesttool
+package com.example.servicetesttool.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
+import com.example.servicetesttool.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,6 +51,16 @@ class EntryFragment : Fragment() {
             R.id.service_button
         ).setOnClickListener {
             findNavController().navigate(R.id.action_entryFragment_to_FirstFragment)
+        }
+
+        view.findViewById<Button>(
+            R.id.content_provider_button
+        ).setOnClickListener {
+            findNavController().navigate(R.id.action_entryFragment_to_ContentProviderFragment)
+        }
+        view.findViewById<Button>(R.id.broadcast_receiver_button).setOnClickListener {
+            findNavController().navigate(R.id.action_entryFragment_to_braodcastReceiverFragment)
+
         }
     }
 

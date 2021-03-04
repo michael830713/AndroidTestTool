@@ -12,7 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceTestTool">
         <service android:name=".CounterService" />
+        <receiver
+            android:name=".MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
 
+            </intent-filter>
+        </receiver>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -23,6 +30,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:name=".DataProvider"
+            android:authorities="com.example.servicetesttool.DataProvider"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>
