@@ -19,4 +19,6 @@
     <string name="read">Read</string>
     <string name="broadcast_receiver">Broadcast Receiver</string>
     <string name="listen_timezone_change">listen timezone change</string>
+    <string name="background_service">Background Service</string>
+    <string name="start_background_task">Start Background task</string>
 </resources>

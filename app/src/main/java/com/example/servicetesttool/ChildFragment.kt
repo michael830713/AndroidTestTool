@@ -10,11 +10,11 @@ abstract class ChildFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
-        (activity as AppCompatActivity).supportActionBar?.title = fragmentTitle()
+        (activity as AppCompatActivity).supportActionBar?.title = appBarTitle()
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    abstract fun fragmentTitle(): String
+    abstract fun appBarTitle(): String
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         findNavController().navigateUp()
         return super.onOptionsItemSelected(item)

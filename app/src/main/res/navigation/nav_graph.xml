@@ -29,10 +29,18 @@
         <action
             android:id="@+id/action_entryFragment_to_braodcastReceiverFragment"
             app:destination="@id/braodcastReceiverFragment" />
+        <action
+            android:id="@+id/action_entryFragment_to_backgroundServiceFragment"
+            app:destination="@id/backgroundServiceFragment" />
     </fragment>
     <fragment
         android:id="@+id/braodcastReceiverFragment"
         android:name="com.example.servicetesttool.fragments.BraodcastReceiverFragment"
         android:label="fragment_braodcast_receiver"
         tools:layout="@layout/fragment_braodcast_receiver" />
+    <fragment
+        android:id="@+id/backgroundServiceFragment"
+        android:name="com.example.servicetesttool.fragments.BackgroundServiceFragment"
+        android:label="fragment_background_service"
+        tools:layout="@layout/fragment_background_service" />
 </navigation>

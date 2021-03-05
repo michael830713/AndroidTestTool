@@ -26,7 +26,7 @@ class BraodcastReceiverFragment : ChildFragment() {
     // TODO: Rename and change types of parameters
 
 
-    override fun fragmentTitle(): String = "Broadcast Receiver"
+    override fun appBarTitle(): String = "Broadcast Receiver"
 
 
     override fun onCreateView(

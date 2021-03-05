@@ -22,7 +22,7 @@ private const val TAG = "SecondFragment"
 class ContentProviderFragment : ChildFragment() {
 
 
-    override fun fragmentTitle(): String = "Content Provider"
+    override fun appBarTitle(): String = "Content Provider"
 
 
     override fun onCreateView(

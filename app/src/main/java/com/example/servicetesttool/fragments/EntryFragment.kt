@@ -1,12 +1,10 @@
 package com.example.servicetesttool.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
 import com.example.servicetesttool.R
 
@@ -48,7 +46,7 @@ class EntryFragment : Fragment() {
 
 
         view.findViewById<Button>(
-            R.id.service_button
+            R.id.foreground_service_button
         ).setOnClickListener {
             findNavController().navigate(R.id.action_entryFragment_to_FirstFragment)
         }
@@ -60,6 +58,10 @@ class EntryFragment : Fragment() {
         }
         view.findViewById<Button>(R.id.broadcast_receiver_button).setOnClickListener {
             findNavController().navigate(R.id.action_entryFragment_to_braodcastReceiverFragment)
+
+        }
+        view.findViewById<Button>(R.id.background_service_button).setOnClickListener {
+            findNavController().navigate(R.id.action_entryFragment_to_backgroundServiceFragment)
 
         }
     }

@@ -21,7 +21,7 @@ private const val TAG = "ServiceFragment"
 class ServiceFragment : ChildFragment() {
 
 
-    override fun fragmentTitle(): String = "Service Fragment"
+    override fun appBarTitle(): String = "Service Fragment"
 
 
     override fun onCreateView(
