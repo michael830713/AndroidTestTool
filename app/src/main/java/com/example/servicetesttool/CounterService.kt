@@ -48,7 +48,6 @@ class CounterService : Service() {
             override fun onFinish() {
                 Log.d(TAG, "done ")
                 stopSelf()
-                // do something
             }
         }
         timer.start()

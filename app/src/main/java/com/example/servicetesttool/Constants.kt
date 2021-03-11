@@ -20,6 +20,8 @@ class Constants {
         val ID = "_ID"
         val TEXT = "MESSAGE"
         val TEXT_DATA = "Hello Content Providers!"
+        const val UPDATE_COUNT = 101
+        const val START_PROGRESS = 101
 
         // Job scheduler Constants
         const val jobId = 123

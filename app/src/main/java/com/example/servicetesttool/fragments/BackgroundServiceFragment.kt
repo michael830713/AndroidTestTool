@@ -6,10 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.PeriodicWorkRequestBuilder
-import androidx.work.WorkManager
-import androidx.work.WorkRequest
+import androidx.work.*
 import com.example.servicetesttool.ChildFragment
 import com.example.servicetesttool.R
 import com.example.servicetesttool.UploadWorker
@@ -46,9 +43,10 @@ class BackgroundServiceFragment : ChildFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val uploadWorkRequest: WorkRequest =
-            PeriodicWorkRequestBuilder<UploadWorker>(10, TimeUnit.MILLISECONDS)
-                .build()
+        val uploadWorkRequest: PeriodicWorkRequest =
+            PeriodicWorkRequestBuilder<UploadWorker>(1, TimeUnit.SECONDS).build()
+
+
         view.findViewById<Button>(R.id.start_background_button).setOnClickListener {
             WorkManager
                 .getInstance(requireActivity())
